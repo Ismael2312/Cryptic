@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptic - Desenvolvedor Web</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <div class="logo-text">Cryptic</div>
+      </div>
+      <nav class="menu-centralizado" id="menuCentralizado">
+        <ul>
+          <li><a href="#hero"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="#sobre"><i class="fas fa-user"></i> Sobre</a></li>
+          <li><a href="#historia"><i class="fas fa-book"></i> História</a></li>
+          <li><a href="#projetos"><i class="fas fa-code"></i> Projetos</a></li>
+          <li><a href="#ideias"><i class="fas fa-brain"></i> Ideias</a></li>
+          <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+          <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+      </nav>
+      <div class="redes-sociais">
+        <a href="https://instagram.com/ismaeltwo" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/in/ismaelvitor" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="ismael.v.silva@outlook.com.br" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <div class="hero-content">
+        <h4>Desenvolvedor Web & UI/UX Designer</h4>
+        <h2>
+          <span id="typed-title-1" class="typing-text"></span>
+          <span id="typing-cursor-title-1" class="typing-cursor"></span>
+        </h2>
+        <p>
+          <span id="typed-subtitle-1" class="typing-text"></span>
+          <span id="typing-cursor-subtitle-1" class="typing-cursor"></span>
+        </p>
+        <button onclick="document.querySelector('#sobre').scrollIntoView({behavior: 'smooth'})">Conheça Minha História</button>
+      </div>
+    </div>
+    
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="hero-content">
+        <h4>Criador de Soluções Digitais</h4>
+        <h2>
+          <span id="typed-title-2" class="typing-text"></span>
+          <span id="typing-cursor-title-2" class="typing-cursor"></span>
+        </h2>
+        <p>
+          <span id="typed-subtitle-2" class="typing-text"></span>
+          <span id="typing-cursor-subtitle-2" class="typing-cursor"></span>
+        </p>
+        <button onclick="document.querySelector('#projetos').scrollIntoView({behavior: 'smooth'})">Ver Projetos</button>
+      </div>
+    </div>
+    
+    <!-- Slide 3 -->
+    <div class="slide">
+      <div class="hero-content">
+        <h4>Transformando Ideias em Realidade</h4>
+        <h2>
+          <span id="typed-title-3" class="typing-text"></span>
+          <span id="typing-cursor-title-3" class="typing-cursor"></span>
+        </h2>
+        <p>
+          <span id="typed-subtitle-3" class="typing-text"></span>
+          <span id="typing-cursor-subtitle-3" class="typing-cursor"></span>
+        </p>
+        <button onclick="document.querySelector('#ideias').scrollIntoView({behavior: 'smooth'})">Ver Ideias</button>
+      </div>
+    </div>
+    
+    <div class="slideshow-controls">
+      <button id="prevBtn" aria-label="Slide Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button id="nextBtn" aria-label="Próximo Slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    
+    <div class="slide-indicators">
+      <div class="indicator active" data-index="0"></div>
+      <div class="indicator" data-index="1"></div>
+      <div class="indicator" data-index="2"></div>
+    </div>
+  </section>
+
+  <!-- Seção "Sobre Mim" -->
+  <section id="sobre" class="sobre-mim">
+    <div class="container-section">
+      <div class="sobre-grid">
+        <div class="sobre-imagem"></div>
+        <div class="sobre-conteudo">
+          <h2>Sobre Mim</h2>
+          <p>Sou um desenvolvedor web apaixonado por criar soluções digitais que combinam design elegante e funcionalidade excepcional. Com formação em Técnico em Informática pelo IFRN e um curso em andamento em Ciências da computação pela Uninter, busco constantemente aprender novas tecnologias e aprimorar minhas habilidades.</p>
+          <p>Minha abordagem combina atenção aos detalhes, criatividade e foco nos resultados para entregar projetos que superam as expectativas e proporcionam experiências memoráveis aos usuários.</p>
+          
+          <div class="info-pessoal">
+            <div class="info-item">
+              <h4>Nome:</h4>
+              <p>Ismael</p>
+            </div>
+            <div class="info-item">
+              <h4>Idade:</h4>
+              <p>22 anos</p>
+            </div>
+            <div class="info-item">
+              <h4>Formação:</h4>
+              <p>Técnico em Informática, IFRN.</p>
+              <p>Ciências da computação, Uninter (em andamento)</p>
+            </div>
+            <div class="info-item">
+              <h4>Localização:</h4>
+              <p>Assú/Açu, RN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção "Minha História" -->
+  <section id="historia" class="minha-historia">
+    <div class="container-section">
+      <div class="section-header">
+        <h2>Minha História</h2>
+        <p>Conheça a jornada que me levou a criar um repositório de ideias</p>
+      </div>
+      
+      <div class="historia-grid">
+        <div class="historia-conteudo">
+          <h3>Minha Jornada</h3>
+          <p>Sou um desenvolvedor web apaixonado por transformar ideias em realidade digital. Minha jornada na tecnologia começou cedo, mas foi uma experiência pessoal que moldou minha abordagem criativa.</p>
+          
+          <div class="inspiracao">
+            <p>"O mundo está cheio de ideias esperando para nascer. Não as deixe morrer dentro de você. Escreva, crie, construa! Cada ideia que você coloca no papel é uma semente que pode florescer."</p>
+          </div>
+          
+          <p>Essas palavras da minha avó, que hoje não está mais entre nós, ecoaram em mim por anos. Ela sempre acreditou no meu potencial e me incentivou a correr atrás dos meus sonhos. Foi esse incentivo que me levou a criar este projeto.</p>
+          <p>O site nasceu como um espaço sagrado para depositar qualquer ideia que eu tivesse, independente de quão grande, pequena ou maluca fosse. É meu repositório pessoal, meu caderno digital, o lugar onde minhas inspirações ganham forma antes de se tornarem realidade.</p>
+          
+          <div class="info-pessoal">
+            <div class="info-item">
+              <h4>Missão:</h4>
+              <p>Dar vida às ideias através da tecnologia</p>
+            </div>
+            <div class="info-item">
+              <h4>Valores:</h4>
+              <p>Criatividade, Persistência, Inovação</p>
+            </div>
+            <div class="info-item">
+              <h4>Filosofia:</h4>
+              <p>Nenhuma ideia merece ficar esquecida</p>
+            </div>
+          </div>
+        </div>
+        <div class="historia-imagem"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção "Projetos" -->
+  <section id="projetos" class="projetos">
+    <div class="container-section">
+      <h2 class="titulo-secao">Meus Projetos</h2>
+      
+      <div class="filtros">
+        <button class="filtro-btn active" data-filter="todos">Todos</button>
+        <button class="filtro-btn" data-filter="websites">Websites</button>
+        <button class="filtro-btn" data-filter="aplicativos">Aplicativos</button>
+        <button class="filtro-btn" data-filter="design">Design</button>
+        <button class="filtro-btn" data-filter="Fotos">Fotos</button>
+        <button class="filtro-btn" data-filter="Video">Video</button>
+        <button class="filtro-btn" data-filter="3D">3D</button>
+      </div>
+      
+      <div class="cards-container">
+        <div class="card-projeto" data-categoria="websites">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Plataforma E-commerce">
+          <div class="conteudo-card">
+            <h3>Design de Websites</h3>
+            <p>Design completos de sites para uso e para ser usado como ideias e inspiração.</p>
+            <div class="tecnologias">
+              <span class="tecnologia">HTML</span>
+              <span class="tecnologia">CSS</span>
+              <span class="tecnologia">JavaScript</span>
+              <span class="tecnologia">WordPress</span>
+            </div>
+            <a href="/view/websites.html" class="btn-visitar">Ver Projetos</a>
+          </div>
+        </div>
+        
+        <!-- <div class="card-projeto" data-categoria="Fotos">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="UI Design App Financeiro">
+          <div class="conteudo-card">
+            <h3>Fotos e 3D</h3>
+            <p>Repositorio de Fotos de viagens, trabalhos com impressão 3D etc</p>
+            <div class="tecnologias">
+              <span class="tecnologia">Fotos</span>
+              <span class="tecnologia">3D</span>
+              <span class="tecnologia">Prototipagem</span>
+            </div>
+            <a href="fotos.html" class="btn-visitar">Ver Projetos</a>
+          </div>
+        </div> -->
+
+        <!-- <div class="card-projeto" data-categoria="design">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="UI Design App Financeiro">
+          <div class="conteudo-card">
+            <h3>Edição de Video</h3>
+            <p>Design de interface completo para aplicativo de gestão financeira pessoal, com foco em usabilidade e experiência do usuário.</p>
+            <div class="tecnologias">
+              <span class="tecnologia"></span>
+              <span class="tecnologia"></span>
+              <span class="tecnologia">Capcut</span>
+            </div>
+            <a href="videos.html" class="btn-visitar">Ver Projetos</a>
+          </div>
+        </div> -->
+
+        <div class="card-projeto" data-categoria="design">
+          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="UI Design App Financeiro">
+          <div class="conteudo-card">
+            <h3>Design de cards </h3>
+            <p>Design de cards para sites, com ênfase em organização visual, clareza das informações e foco na experiência do usuário..</p>
+            <div class="tecnologias">
+              <span class="tecnologia">Figma</span>
+              <span class="tecnologia">UI/UX</span>
+              <span class="tecnologia">Prototipagem</span>
+            </div>
+            <a href="/view/cards.html" class="btn-visitar">Ver Projeto</a>
+          </div>
+        </div>
+
+        <div class="card-projeto" data-categoria="websites">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Blog Tecnológico">
+          <div class="conteudo-card">
+            <h3>Design de Formularios</h3>
+            <p>Criação de blog responsivo com sistema de gerenciamento de conteúdo personalizado e integração com redes sociais.</p>
+            <div class="tecnologias">
+              <span class="tecnologia">WordPress</span>
+              <span class="tecnologia">PHP</span>
+              <span class="tecnologia">JavaScript</span>
+            </div>
+            <a href="/view/forms.html" class="btn-visitar">Ver Projeto</a>
+          </div>
+        </div>
+        
+        <div class="card-projeto" data-categoria="aplicativos">
+          <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="App de Tarefas">
+          <div class="conteudo-card">
+            <h3>Design de menu navegação</h3>
+            <p>Aplicativo móvel para gerenciamento de tarefas com sincronização em nuvem, notificações e categorização inteligente.</p>
+            <div class="tecnologias">
+              <span class="tecnologia">React Native</span>
+              <span class="tecnologia">Firebase</span>
+              <span class="tecnologia">Redux</span>
+            </div>
+            <a href="/view/menu.html" class="btn-visitar">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Ideias em Desenvolvimento -->
+  <section id="ideias" class="ideias">
+    <div class="container-section">
+      <div class="section-header">
+        <h2>Ideias em Desenvolvimento</h2>
+        <p>Alguns dos projetos que estão nascendo no repositório</p>
+      </div>
+      
+      <div class="cards-container-ideias">
+        <div class="card-ideia">
+          <div class="card-header">
+            <h3>EcoTracker</h3>
+            <p class="categoria">Sustentabilidade & Tecnologia</p>
+          </div>
+          <div class="card-body">
+            <p>Plataforma para monitorar e reduzir pegada de carbono pessoal com metas gamificadas e recomendações personalizadas.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn-ideia">Detalhes da Ideia</a>
+          </div>
+        </div>
+
+        <div class="card-ideia">
+          <div class="card-header">
+            <h3>UPGames</h3>
+            <p class="categoria">Educação & Tecnologia</p>
+          </div>
+          <div class="card-body">
+            <p>Plataforma de publicização de gamificações para uso no ensino nas escolas e trazendo novas práticas pedagógicas para o portofolio dos professores do jeito mais fácil e com mais baixo custo possível, para assim, ser possível aplicar-se em qualquer ambiente.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn-ideia">Detalhes da Ideia</a>
+          </div>
+        </div>
+        
+        <div class="card-ideia">
+          <div class="card-header">
+            <h3>MindCanvas</h3>
+            <p class="categoria">Criatividade & Design</p>
+          </div>
+          <div class="card-body">
+            <p>Ferramenta colaborativa de brainstorming visual que transforma pensamentos em mapas mentais interativos e compartilháveis.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn-ideia">Detalhes da Ideia</a>
+          </div>
+        </div>
+        
+        <div class="card-ideia">
+          <div class="card-header">
+            <h3>SkillSwap</h3>
+            <p class="categoria">Comunidade & Aprendizado</p>
+          </div>
+          <div class="card-body">
+            <p>Plataforma de troca de habilidades onde usuários ensinam o que sabem e aprendem o que precisam, sem custo financeiro.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn-ideia">Detalhes da Ideia</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="secao-skills">
+    <div class="container-section">
+      <h3 class="titulo-skills">Minhas Skills</h3>
+      <div class="skills-container">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3>HTML5</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 100%"></div>
+          </div>
+          <div class="skill-info">
+            <span>Iniciante</span>
+            <span>Especialista</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-css3-alt"></i>
+          </div>
+          <h3>CSS3</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 95%"></div>
+          </div>
+          <div class="skill-info">
+            <span>Iniciante</span>
+            <span>Especialista</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-js"></i>
+          </div>
+          <h3>JavaScript</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 85%"></div>
+          </div>
+          <div class="skill-info">
+            <span>Iniciante</span>
+            <span>Especialista</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-react"></i>
+          </div>
+          <h3>React</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 80%"></div>
+          </div>
+          <div class="skill-info">
+            <span>Iniciante</span>
+            <span>Especialista</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <h3>Node.js</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 75%"></div>
+          </div>
+          <div class="skill-info">
+            <span>Iniciante</span>
+            <span>Especialista</span>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Banco de Dados</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 50%"></div>
+          </div>
+          <div class="skill-info">
+            <span>Iniciante</span>
+            <span>Especialista</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="secao-contato">
+    <div class="contato-container">
+      <div class="contato-info">
+        <h3>Vamos conversar!</h3>
+        <p>Estou disponível para oportunidades de trabalho freelance e projetos desafiadores. Entre em contato e vamos transformar suas ideias em realidade.</p>
+        
+        <div class="contato-item">
+          <div class="contato-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contato-detalhes">
+            <h4>Localização</h4>
+            <p>Assú/Açu, RN - Brasil</p>
+          </div>
+        </div>
+        
+        <div class="contato-item">
+          <div class="contato-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contato-detalhes">
+            <h4>Email</h4>
+            <p>Ismael.v.silva@outlook.com.br</p>
+          </div>
+        </div>
+        
+        <div class="contato-item">
+          <div class="contato-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contato-detalhes">
+            <h4>Telefone</h4>
+            <p>+55 (84) 99450-6743</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contato-form">
+        <form id="formContato">
+          <div class="form-group">
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <div class="form-error" id="nome-error"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Seu Email" required>
+            <div class="form-error" id="email-error"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto">
+          </div>
+          <div class="form-group">
+            <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <div class="form-error" id="mensagem-error"></div>
+          </div>
+          <button type="submit">Enviar Mensagem</button>
+          <div class="form-success" id="formSuccess">Mensagem enviada com sucesso! Entrarei em contato em breve.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <h4>CRYPTIC</h4>
+      <p>Cultivando ideais e transformando sonhos em realidade.</p>
+      <div class="copyright">© 2025 Ismael. Todos os direitos reservados.</div>
+      <div>Em eterna homenagem àquela que, como avó e mãe, foi exemplo de inspiração e força incansável
+      <br>Obrigado por acreditar em mim e me ensinar a nunca desistir dos meus sonhos. Você sempre estará em meu coração, Mãe!</div>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

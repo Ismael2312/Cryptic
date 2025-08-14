@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cryptic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/styleprojects.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <div class="logo-text">Cryptic</div>
+        <!-- Barra de progresso abaixo do logo -->
+        <div class="logo-progress-bar" id="logoProgressBar"></div>
+      </div>
+      <nav>
+        <ul id="mainMenu">
+          <li><a href="Index.html"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="#"><i class="fas fa-newspaper"></i> Artigos</a></li>
+          <li><a href="#"><i class="fas fa-tags"></i> Categorias</a></li>
+          <li><a href="#"><i class="fas fa-info-circle"></i> Sobre</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-search">
+    <div class="search-box">
+      <input type="text" placeholder="Pesquisar notícias..." id="mobileSearchInput">
+      <button id="mobileSearchBtn"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="banner-content">
+      <h1>As Últimas Notícias em Tecnologia</h1>
+      <p>Fique atualizado com as novidades do mundo digital, desenvolvimento web e inovações tecnológicas</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="news-container">
+      <div class="news-grid" id="newsGrid">
+        <!-- Os artigos serão gerados via JavaScript -->
+      </div>
+      
+      <!-- Paginação -->
+      <div class="pagination" id="pagination">
+        <!-- Os botões de paginação serão gerados via JavaScript -->
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="search-widget">
+        <h3>Buscar</h3>
+        <div class="search-box">
+          <input type="text" placeholder="Pesquisar notícias..." id="desktopSearchInput">
+          <button id="desktopSearchBtn"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      
+      <div class="categories">
+        <h3>Categorias</h3>
+        <ul class="category-list">
+          <li><a href="#" data-category="tecnologia">Tecnologia <span>24</span></a></li>
+          <li><a href="#" data-category="desenvolvimento">Desenvolvimento <span>18</span></a></li>
+          <li><a href="#" data-category="design">Design <span>15</span></a></li>
+          <li><a href="#" data-category="ia">Inteligência Artificial <span>12</span></a></li>
+          <li><a href="#" data-category="seguranca">Segurança <span>9</span></a></li>
+          <li><a href="#" data-category="inovacao">Inovação <span>7</span></a></li>
+        </ul>
+      </div>
+      
+      <div class="popular-tags-widget">
+        <h3>Tags Populares</h3>
+        <div class="popular-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">CSS</span>
+          <span class="tag">UI/UX</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Web Design</span>
+          <span class="tag">Responsivo</span>
+          <span class="tag">APIs</span>
+          <span class="tag">Frontend</span>
+          <span class="tag">Backend</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <h4>CRYPTIC</h4>
+      <p>Sua fonte confiável de notícias sobre tecnologia e desenvolvimento web</p>
+      <div class="copyright">© 2025 Cryptic. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <script src="/js/forms.js"></script>
+</body>
+</html>
