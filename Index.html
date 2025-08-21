@@ -1,3 +1,25 @@
+<!-- MIT License
+
+Copyright (c) 2025 Ismael Vitor da Silva
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,7 +27,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cryptic - Desenvolvedor Web</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+
+  </style>
 </head>
 <body>
   <header id="header">
@@ -27,7 +52,7 @@
       <div class="redes-sociais">
         <a href="https://instagram.com/ismaeltwo" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com/in/ismaelvitor" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="ismael.v.silva@outlook.com.br" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:ismael.v.silva@outlook.com.br" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
       <button class="mobile-menu-btn" id="mobileMenuBtn">
         <i class="fas fa-bars"></i>
@@ -124,6 +149,10 @@
               <h4>Localização:</h4>
               <p>Assú/Açu, RN</p>
             </div>
+            <a href="/view/curriculo.html" class="btn-veja-mais" target="_blank">
+      <span>Veja Mais</span>
+      <i class="fas fa-arrow-right"></i>
+    </a>
           </div>
         </div>
       </div>
@@ -180,9 +209,11 @@
         <button class="filtro-btn" data-filter="websites">Websites</button>
         <button class="filtro-btn" data-filter="aplicativos">Aplicativos</button>
         <button class="filtro-btn" data-filter="design">Design</button>
-        <button class="filtro-btn" data-filter="Fotos">Fotos</button>
-        <button class="filtro-btn" data-filter="Video">Video</button>
-        <button class="filtro-btn" data-filter="3D">3D</button>
+        <button class="filtro-btn" data-filter="jogos">Jogos</button>
+
+        <!-- <button class="filtro-btn" data-filter="Fotos">Fotos</button>
+        <button class="filtro-btn" data-filter="Video">Video</button> -->
+        <!-- <button class="filtro-btn" data-filter="3D">3D</button> -->
       </div>
       
       <div class="cards-container">
@@ -190,7 +221,7 @@
           <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Plataforma E-commerce">
           <div class="conteudo-card">
             <h3>Design de Websites</h3>
-            <p>Design completos de sites para uso e para ser usado como ideias e inspiração.</p>
+            <p>Desenvolvimento completo de plataforma de e-commerce com carrinho de compras, pagamentos integrados e painel administrativo.</p>
             <div class="tecnologias">
               <span class="tecnologia">HTML</span>
               <span class="tecnologia">CSS</span>
@@ -211,7 +242,7 @@
               <span class="tecnologia">3D</span>
               <span class="tecnologia">Prototipagem</span>
             </div>
-            <a href="fotos.html" class="btn-visitar">Ver Projetos</a>
+            <a href="/view/fotos.html" class="btn-visitar">Ver Projetos</a>
           </div>
         </div> -->
 
@@ -225,7 +256,7 @@
               <span class="tecnologia"></span>
               <span class="tecnologia">Capcut</span>
             </div>
-            <a href="videos.html" class="btn-visitar">Ver Projetos</a>
+            <a href="/view/videos.html" class="btn-visitar">Ver Projetos</a>
           </div>
         </div> -->
 
@@ -233,13 +264,13 @@
           <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="UI Design App Financeiro">
           <div class="conteudo-card">
             <h3>Design de cards </h3>
-            <p>Design de cards para sites, com ênfase em organização visual, clareza das informações e foco na experiência do usuário..</p>
+            <p>Design de interface completo para aplicativo de gestão financeira pessoal, com foco em usabilidade e experiência do usuário.</p>
             <div class="tecnologias">
               <span class="tecnologia">Figma</span>
               <span class="tecnologia">UI/UX</span>
               <span class="tecnologia">Prototipagem</span>
             </div>
-            <a href="/view/cards.html" class="btn-visitar">Ver Projeto</a>
+            <a href="/view/cards.html" class="btn-visitar">Ver projetos</a>
           </div>
         </div>
 
@@ -253,7 +284,7 @@
               <span class="tecnologia">PHP</span>
               <span class="tecnologia">JavaScript</span>
             </div>
-            <a href="/view/forms.html" class="btn-visitar">Ver Projeto</a>
+            <a href="/view/forms.html" class="btn-visitar">Ver Projetos</a>
           </div>
         </div>
         
@@ -267,7 +298,22 @@
               <span class="tecnologia">Firebase</span>
               <span class="tecnologia">Redux</span>
             </div>
-            <a href="/view/menu.html" class="btn-visitar">Ver Projeto</a>
+            <a href="/view/menu.html" class="btn-visitar">Ver Projetos</a>
+          </div>
+        </div>
+
+        <div class="card-projeto" data-categoria="jogos">
+          <img src="https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="App de Tarefas">
+          <div class="conteudo-card">
+            <h3>Jogos simples</h3>
+            <p>Aqui se encontra algumas ideias de joguinhos de navegadore, jogos que remetam a época 8bit etc.</p>
+            <div class="tecnologias">
+              <span class="tecnologia">JavaScript</span>
+              <span class="tecnologia">React</span>
+              <span class="tecnologia">HTML</span>
+              <span class="tecnologia">CSS</span>
+            </div>
+            <a href="/view/jogos.html" class="btn-visitar">Ver Projetos</a>
           </div>
         </div>
       </div>
@@ -467,24 +513,27 @@
       </div>
       
       <div class="contato-form">
-        <form id="formContato">
+        <form id="contact-form">
           <div class="form-group">
-            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <input type="text" id="nome" name="user_name" placeholder="Seu Nome" required>
             <div class="form-error" id="nome-error"></div>
           </div>
           <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Seu Email" required>
+            <input type="email" id="email" name="user_email" placeholder="Seu Email" required>
             <div class="form-error" id="email-error"></div>
           </div>
           <div class="form-group">
-            <input type="text" id="assunto" name="assunto" placeholder="Assunto">
+            <input type="text" id="assunto" name="subject" placeholder="Assunto">
           </div>
           <div class="form-group">
-            <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" required></textarea>
+            <textarea id="mensagem" name="message" placeholder="Sua Mensagem" required></textarea>
             <div class="form-error" id="mensagem-error"></div>
           </div>
-          <button type="submit">Enviar Mensagem</button>
-          <div class="form-success" id="formSuccess">Mensagem enviada com sucesso! Entrarei em contato em breve.</div>
+          <button type="submit" id="submit-btn">Enviar Mensagem</button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <p>Mensagem enviada com sucesso! Entrarei em contato em breve.</p>
+          </div>
         </form>
       </div>
     </div>
@@ -494,7 +543,7 @@
     <div class="footer-content">
       <h4>CRYPTIC</h4>
       <p>Cultivando ideais e transformando sonhos em realidade.</p>
-      <div class="copyright">© 2025 Ismael. Todos os direitos reservados.</div>
+      <div class="copyright">© 2025 Ismael. Todos os direitos reservados</div>
       <div>Em eterna homenagem àquela que, como avó e mãe, foi exemplo de inspiração e força incansável
       <br>Obrigado por acreditar em mim e me ensinar a nunca desistir dos meus sonhos. Você sempre estará em meu coração, Mãe!</div>
     </div>
@@ -504,7 +553,9 @@
     <i class="fas fa-arrow-up"></i>
   </div>
 
-    <script src="/js/script.js"></script>
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="/js/script.js"></script>
 
+  
+</body>
 </html>

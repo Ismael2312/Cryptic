@@ -1,4 +1,32 @@
-// Gerenciamento de transparência do menu
+// MIT License
+
+// Copyright (c) 2025 Ismael Vitor da Silva
+
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE. 
+
+   
+    // Inicializa o EmailJS com seu User ID
+    (function() {
+      emailjs.init("n17vujf-kzEPr9AOI"); // Substitua "YOUR_USER_ID" pelo seu ID do EmailJS
+    })();
+    
+    // Gerenciamento de transparência do menu
     const headerEl = document.getElementById('header');
     
     // Verifica se estamos no topo da página
@@ -17,6 +45,21 @@
         backToTop.classList.remove('visible');
       }
     }
+    
+       // Adicionando um efeito de clique suave
+    document.querySelectorAll('.btn-veja-mais').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Efeito visual de clique
+        this.style.transform = 'scale(0.95)';
+        
+        // Redirecionamento após um breve delay para o efeito visual
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 300);
+      });
+    });
     
     // Verifica a posição inicial
     checkScrollPosition();
@@ -111,9 +154,12 @@
       });
     });
     
-    // Formulário de contato
-    const formContato = document.getElementById('formContato');
-    formContato.addEventListener('submit', (e) => {
+    // Formulário de contato com EmailJS
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formSuccess = document.getElementById('formSuccess');
+    
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
       // Limpa erros anteriores
@@ -145,18 +191,33 @@
         isValid = false;
       }
       
-      if (isValid) {
-        // Simula o envio
-        setTimeout(() => {
-          document.getElementById('formSuccess').style.display = 'block';
-          formContato.reset();
+      if (!isValid) return;
+      
+      // Desabilita o botão durante o envio
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+      
+      // Envia o email usando EmailJS
+      emailjs.sendForm('service_dza9u48', 'template_ltsj94r', this)
+        .then(() => {
+          // Sucesso
+          formSuccess.style.display = 'block';
+          contactForm.reset();
           
-          // Oculta a mensagem após 5 segundos
+          // Ocultar mensagem após 5 segundos
           setTimeout(() => {
-            document.getElementById('formSuccess').style.display = 'none';
+            formSuccess.style.display = 'none';
           }, 5000);
-        }, 1000);
-      }
+        }, (error) => {
+          // Erro
+          alert('Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.');
+          console.error('Falha no envio. ERRO:', error);
+        })
+        .finally(() => {
+          // Reativa o botão
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar Mensagem';
+        });
     });
     
     // Slideshow e efeito de máquina de escrever
