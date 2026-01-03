@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack do Preço - Ofertas Secretas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CORES E VARIÁVEIS --- */
+        :root {
+            --primary: #111827; /* Fundo escuro/tech opcional, ou manter claro */
+            --accent: #10b981; /* Verde Hacker */
+            --telegram: #0088cc; /* Azul Telegram */
+            --bg-body: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            padding-bottom: 90px; /* Espaço para o botão flutuante não cobrir conteúdo */
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- HEADER SIMPLIFICADO (STICKY) --- */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 10px 0;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mini-logo {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .mini-logo i { color: var(--accent); }
+
+        .header-btn {
+            background-color: var(--telegram);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        /* --- HERO SECTION (ÁREA DO MASCOTE E BOTÃO) --- */
+        .hero {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%);
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 2rem;
+        }
+
+        /* A IMAGEM DO MASCOTE */
+        .mascot-hero {
+            width: 180px; /* Tamanho bom para celular */
+            height: auto;
+            margin: 0 auto 10px auto;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero h1 {
+            font-size: 1.6rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: #0f172a;
+        }
+
+        .hero p {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+
+        /* BOTÃO TELEGRAM DESTAQUE (PULSANTE) */
+        .cta-telegram-big {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #0088cc, #00aaff);
+            color: white;
+            font-weight: 800;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            border-radius: 50px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
+            animation: pulse-blue 2s infinite;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulse-blue {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(0, 136, 204, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+        }
+
+        /* --- PRODUTOS --- */
+        .products-title {
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+        
+        .products-title span { color: var(--accent); }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* 1 Coluna no mobile */
+            gap: 1.5rem;
+        }
+
+        /* Ajuste para Tablet/PC */
+        @media(min-width: 600px) {
+            .products-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+            .mascot-hero { width: 220px; }
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 15px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            position: relative;
+        }
+
+        .badge-off {
+            position: absolute;
+            top: 15px; left: 15px;
+            background: #ef4444;
+            color: white;
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+
+        .prod-img {
+            height: 180px;
+            width: 100%;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .prod-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            height: 44px; /* Altura fixa para alinhar */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .old { text-decoration: line-through; color: #94a3b8; font-size: 0.85rem; }
+        .new { color: var(--accent); font-weight: 800; font-size: 1.4rem; }
+
+        .btn-buy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 12px;
+            background: var(--text-main);
+            color: white;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+        
+        .btn-buy:active { transform: scale(0.98); }
+
+        /* --- FAB (Botão Flutuante) --- */
+        .fab-telegram {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--telegram);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,136,204,0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="mini-logo">
+                <i class="fas fa-terminal"></i> HackDoPreço
+            </div>
+            <a href="https://t.me/Hackdopreco" class="header-btn">
+                <i class="fab fa-telegram-plane"></i> Entrar
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="/images/Mascote.png" alt="Mascote Hack do Preço" class="mascot-hero">
+            
+            <h1>Achamos as ofertas escondidas para você</h1>
+            <p>Entre agora no grupo e receba erros de preço e promoções antes de todo mundo.</p>
+
+            <a href="https://t.me/Hackdopreco" target="_blank" class="cta-telegram-big">
+                <i class="fab fa-telegram-plane"></i> Entrar no Grupo VIP
+            </a>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="products-title"><i class="fas fa-fire" style="color:#ef4444"></i> Ofertas <span>Quentes</span></h2>
+
+        <div class="products-grid">
+            
+            <article class="product-card">
+                <span class="badge-off">-44%</span>
+                <img src="/images/A16.webp" class="prod-img" alt="Produto">
+                <h3 class="prod-title">Celular Samsung Galaxy A16 128gb</h3>
+                <div class="price-row">
+                    <span class="old">R$ 1.428</span>
+                    <span class="new">R$ 799</span>
+                </div>
+                <a href="https://t.me/Hackdopreco/5" class="btn-buy">Ver Oferta <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+            </article>
+
+            <article class="product-card">
+                <span class="badge-off">-60%</span>
+                <img src="/images/cook.webp" class="prod-img" alt="Produto">
+                <h3 class="prod-title">Cooktop Itatiaia Essencial 5 Bocas Preto 110/220V</h3>
+                <div class="price-row">
+                    <span class="old">R$ 799,59</span>
+                    <span class="new">R$ 399</span>
+                </div>
+                <a href="#" class="btn-buy">Ver Oferta <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+            </article>
+
+            <article class="product-card">
+                <span class="badge-off">45%</span>
+                <img src="/images/tv.webp" class="prod-img" alt="Produto">
+                <h3 class="prod-title">Smart TV AOC 40" 40S5045/78G Roku TV DLED Full HD</h3>
+                <div class="price-row">
+                    <span class="old">R$ 1.999</span>
+                    <span class="new">R$ 1.099,90</span>
+                </div>
+                <a href="https://t.me/Hackdopreco/3" class="btn-buy">Ver Oferta <i class="fas fa-external-link-alt" style="margin-left:8px"></i></a>
+            </article>
+
+        </div>
+    </main>
+
+    <a href="https://t.me/SEU_LINK" class="fab-telegram">
+        <i class="fab fa-telegram-plane"></i>
+    </a>
+
+    <footer style="text-align: center; padding: 30px 10px; color: #94a3b8; font-size: 0.8rem;">
+        <p>© 2024 Hack do Preço. Promoções sujeitas a alteração.</p>
+    </footer>
+
+</body>
+</html>
